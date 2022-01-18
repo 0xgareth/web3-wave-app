@@ -23,9 +23,9 @@ contract WavePortal {
         return totalWaves;
     }
 
-    function getWavesPerUser(address key) public view returns(uint256) {
-        console.log("This user has waved a total of %d times", wavesPerUser[key]);
-        return wavesPerUser[key];
+    function getWavesPerUser() public view returns(uint256) {
+        console.log("%s has waved a total of %d times", msg.sender, wavesPerUser[msg.sender]);
+        return wavesPerUser[msg.sender];
     }
     
 }
