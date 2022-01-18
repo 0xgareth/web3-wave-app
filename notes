@@ -1,0 +1,11 @@
+Hardhat
+    development env to compile/test/deploy/debug eth software
+    comes w/ hardhat network - local eth network for development
+
+
+HRE - hardhat runtime environment
+    object containing functionality exposed when running tasks/tests/scripts
+        hardhat is really the HRE
+    before running task/test/script hardhat injects HRE into global scope making its fields global vars
+    you can extend the HRE to expose pacakges/libraries within the HRE object at runtime
+        done by adding to hardhat config
