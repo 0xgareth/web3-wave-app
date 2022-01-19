@@ -1,11 +1,34 @@
-Hardhat
-    development env to compile/test/deploy/debug eth software
-    comes w/ hardhat network - local eth network for development
+HARDHAT
+    What is hardhat?
+        development env to compile/test/deploy/debug eth software
+        comes w/ hardhat network - local eth network for development
 
+    HRE (hardhat runtime environment)
+        object containing functionality exposed when running tasks/tests/scripts
+            hardhat is really the HRE
+        before running task/test/script hardhat injects HRE into global scope making its fields global vars
+        you can extend the HRE to expose pacakges/libraries within the HRE object at runtime
+            done by adding to hardhat config
+        
+ETHEREUM
+    EVM 
+        underlying VM whose state everyone on the network agrees on - a copy is kept by all participants (all eth nodes)
+        execution of transaction requests causes state changes to the EVM > they are committed and propagated through the network
 
-HRE - hardhat runtime environment
-    object containing functionality exposed when running tasks/tests/scripts
-        hardhat is really the HRE
-    before running task/test/script hardhat injects HRE into global scope making its fields global vars
-    you can extend the HRE to expose pacakges/libraries within the HRE object at runtime
-        done by adding to hardhat config
+    Smart contracts
+        small executable programs that when called with specified parameters perform actions/computation
+        the blockchain is used as the data layer for a fee paid to the network
+        thus with smart contracts > developers can build/deploy comples user-facing apps/services
+
+    Accounts
+        accounts and balances are stored in a large table in the EVM > part of overall EVM state
+
+    Transactions
+        transaction request - formal name for request for code execution (smart contract execution on the EVM)
+        transaction         - fulfilled transaction request and the change in EVM state
+                            - requires validation, execution and 'committment to network' by another node
+                            
+BITCOIN AS A STATE TRANSITION SYSTEM
+    a ledger can be viewed as a state transition system in that: 
+        - it has a 'state' (ownership status of all bitcoins)
+        - it has a state transition function that takes state & a transaction, and outputs the new state
