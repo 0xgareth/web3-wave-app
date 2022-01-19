@@ -10,6 +10,9 @@ HARDHAT
         you can extend the HRE to expose pacakges/libraries within the HRE object at runtime
             done by adding to hardhat config
         
+ALCHEMY
+    offers a simple method to deploy to ethereum blockchain
+
 ETHEREUM
     EVM 
         underlying VM whose state everyone on the network agrees on - a copy is kept by all participants (all eth nodes)
