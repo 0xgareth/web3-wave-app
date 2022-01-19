@@ -32,3 +32,14 @@ BITCOIN AS A STATE TRANSITION SYSTEM
     a ledger can be viewed as a state transition system in that: 
         - it has a 'state' (ownership status of all bitcoins)
         - it has a state transition function that takes state & a transaction, and outputs the new state
+
+PoW
+    the mathematical work required to validate a block involves a lot of computing power, making it difficult for attackers to create a longer chain the 'pure' one
+    the work done involves modifying the nonce such that the hash meets a certain condition
+    given SHA256 is pseudorandom, the only method to create a valid block is brute force/trial and error (increment nonce to see if hash matches)
+    
+    this PoW helps to secure the network and prevent double spend 
+        the part of the network not secured by cryptography is the order of transactions
+        if a hacker wanted to change this, they'd need to make a modification to a block, invalidating all following blocks
+            this creates two seperate forks (valid and false)
+        since the longest chain is taken as truth, 51% of the networks power is required to make the fals fork longer than the valid
