@@ -9,7 +9,13 @@ HARDHAT
         before running task/test/script hardhat injects HRE into global scope making its fields global vars
         you can extend the HRE to expose pacakges/libraries within the HRE object at runtime
             done by adding to hardhat config
-        
+
+    npx hardhat <task name>                             - executes the task in hardhat.config (e.g. accounts )
+    npx hardhat run <script name>                       - execute script (e.g. run / deploy)
+    npx hardhat node                                    - runs a local hardhat network
+    npx hardhat run <script name> --network localhost   - runs a script against local hardhat network
+    npx hardhat run <script name> --network rinkeby     - runs a script against rinkeby network (e.g. scripts/deploy.js)
+
 ALCHEMY
     offers a simple method to deploy to ethereum blockchain
     since deploying a smart contract requires a transaction (to make contract accessible on chain)
