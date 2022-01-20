@@ -12,6 +12,8 @@ HARDHAT
         
 ALCHEMY
     offers a simple method to deploy to ethereum blockchain
+    since deploying a smart contract requires a transaction (to make contract accessible on chain)
+        alchemy helps to broadcast the app/contract to miners
 
 ETHEREUM
     EVM 
