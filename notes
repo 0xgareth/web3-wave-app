@@ -54,3 +54,5 @@ PoW
         if a hacker wanted to change this, they'd need to make a modification to a block, invalidating all following blocks
             this creates two seperate forks (valid and false)
         since the longest chain is taken as truth, 51% of the networks power is required to make the fals fork longer than the valid
+
+PoS
