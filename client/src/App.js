@@ -7,7 +7,7 @@ export default function App() {
 
 // state variable to store user's public wallet
 const [currentAccount, setCurrentAccount] = useState("");
-const contractAddress = "0xd0DaA248AAc3a8FaB4E0302E2BD921a1c608Fec8"
+const contractAddress = "0x007B5D3903D6A5f2D8FceE9304224Ad080B622Ae"
 const contractABI = abi.abi
 
 const checkIfWalletIsConnected = async () => {
