@@ -18,6 +18,9 @@ HARDHAT
 
 ALCHEMY
     offers a simple method to deploy to ethereum blockchain
+    alchemy have their own ethereum nodes saving hassle of hosting your own
+        (having your own node requires downloading all ethereum data etc)
+    though this does create a central chokepoint (but part of another discussion)
     since deploying a smart contract requires a transaction (to make contract accessible on chain)
         alchemy helps to broadcast the app/contract to miners
 
