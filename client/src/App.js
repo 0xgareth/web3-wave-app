@@ -15,7 +15,7 @@ export default function App() {
     try {
 
       if (window.ethereum) {
-        const provider = new ethers.providers.Web3Provider(ethereum);
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
         const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
