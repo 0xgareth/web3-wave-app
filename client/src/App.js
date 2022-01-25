@@ -8,6 +8,7 @@ export default function App() {
   // state variable to store user's public wallet
   const [currentAccount, setCurrentAccount] = useState("");
   const [allWaves, setAllWaves] = useState([]);
+  const [textInput, setTextInput] = useState("hello :)");
   const contractAddress = "0x007B5D3903D6A5f2D8FceE9304224Ad080B622Ae";
   const contractABI = abi.abi;
 
@@ -62,6 +63,7 @@ export default function App() {
         const account = accounts[0];
         console.log("Found an authorized acc:", account);
         setCurrentAccount(account)
+        getAllWaves()
       } else {
         console.log("No authorized account found");
       }
@@ -107,7 +109,7 @@ export default function App() {
         let count = await wavePortalContract.getTotalWaves();
         console.log("Retrieved total wave count...", count.toNumber());
 
-        const waveTxn = await wavePortalContract.wave("THIS IS THE FIRST MESSAGE!");
+        const waveTxn = await wavePortalContract.wave(textInput);
         console.log("Mining...", waveTxn.hash);
 
         await waveTxn.wait();
@@ -115,6 +117,8 @@ export default function App() {
 
         count = await wavePortalContract.getTotalWaves();
         console.log("Retrieved total wave count...", count.toNumber());
+
+        getAllWaves()
 
       } else {
         console.log("Ethereum object doesn't exist!");
@@ -135,6 +139,8 @@ export default function App() {
         <div className="bio">
         I'm Gareth! Connect your Ethereum wallet and wave at me!
         </div>
+
+        <textarea value={textInput} onChange={(e) => setTextInput(e.target.value)} />
 
         <button className="waveButton" onClick={wave}>
           Wave at Me
