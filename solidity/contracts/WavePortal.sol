@@ -18,8 +18,8 @@ contract WavePortal {
     // holds an array of Wave structs
     Wave[] waves;
 
-    constructor() {
-        console.log("I AM SMART CONTRACT. POG.");
+    constructor() payable {
+        console.log("I AM A SMART CONTRACT. POG.");
     }
 
     function wave(string memory _message) public {
